@@ -7,7 +7,7 @@
 
 dataoggi=`date +%Y-%m-%d_%H-%M-%S`
 
-servername=`riversong`
+servername="riversong"
 
 yesupload=0
 
@@ -77,7 +77,7 @@ else
 fi
 
 echo "Starting Copying of /var/www/owncloud/config/*" | tee -a /tmp/backup-$dataoggi.log
-cp -r /var/www/owcloud/config/* /backup/$servername-bk-$dataoggi/var/www/
+cp -r /var/www/owncloud/config/* /backup/$servername-bk-$dataoggi/var/www/
 rc=$?
 if [ $rc = 0 ]; then
         echo "Ending Copying of /var/www/owncloud/config/*" | tee -a /tmp/backup-$dataoggi.log
@@ -86,7 +86,7 @@ else
 fi
 
 echo "Starting Copying of /var/www/owncloud/data/*" | tee -a /tmp/backup-$dataoggi.log
-cp -r /var/www/owcloud/data/* /backup/$servername-bk-$dataoggi/var/www/
+cp -r /var/www/owncloud/data/* /backup/$servername-bk-$dataoggi/var/www/
 rc=$?
 if [ $rc = 0 ]; then
         echo "Ending Copying of /var/www/owncloud/data/*" | tee -a /tmp/backup-$dataoggi.log
